@@ -1,28 +1,8 @@
-(function($) {
+(function() {
 
 	'use strict';
 
-	function Parrot(options) {
-
-		var default_options = {
-			rgb: {
-				red: 256,
-				green: 256,
-				blue: 256,
-			},
-			animation: {
-				animationSpeed: 500
-			}
-		};
-
-		this.option = $.extends(true, default_options, options || {});
-
-		this.animationSpeed = 500;
-
-	}
-
-	Parrot.prototype = {
-		constructor: Parrot,
+	var changeColorLib = {
 
 		generateColor: function(colorIsRGB, colorIsHEX) {
 			/* 
@@ -53,29 +33,29 @@
 			if ( repeatIsActive && colorIsRGB ) {
 				setInterval(() => {
 					for ( let i = 0; i < colorObjects.length; i++ ) {
-						colorObjects[i].style.backgroundColor = changeColor.generateColor(true, false);
+						colorObjects[i].style.backgroundColor = changeColorLib.generateColor(true, false);
 					}
 				}, 500);
 			}
 			else if ( !repeatIsActive && colorIsRGB ) {
 				for ( let i = 0; i < colorObjects.length; i++ ) {
-					colorObjects[i].style.backgroundColor = changeColor.generateColor(true, false);
+					colorObjects[i].style.backgroundColor = changeColorLib.generateColor(true, false);
 				}
 			}
 			/* ---------------------------------- */
 			else if ( repeatIsActive && colorIsHEX ) {
 				setInterval(() => {
 					for ( let i = 0; i < colorObjects.length; i++ ) {
-						colorObjects[i].style.backgroundColor = changeColor.generateColor(false, true);
+						colorObjects[i].style.backgroundColor = changeColorLib.generateColor(false, true);
 					}
 				}, 500);
 			}
 			else if ( !repeatIsActive && colorIsHEX ) {
 				for ( let i = 0; i < colorObjects.length; i++ ) {
-					colorObjects[i].style.backgroundColor = changeColor.generateColor(false, true);
+					colorObjects[i].style.backgroundColor = changeColorLib.generateColor(false, true);
 				}
 			}
 		}
 	}
 
-}(jQuery));
+});
