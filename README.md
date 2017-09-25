@@ -9,7 +9,11 @@ example use:
 changeColorLib.addColor(true, false, 'box', true);
 
 Arguments:
-  #1 - Get RGB color
+<ul>
+  <li>dgfd</li>
+  <li>dgfd</li>
+</ul>
+  #1 - Get RGB color
   #2 - Get HEX color
   #3 - Classname of DOM object to be changed, for example 'box'
   #4 - Boolean, if true repeats the color change.
