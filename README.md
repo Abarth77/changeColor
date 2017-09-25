@@ -1,4 +1,4 @@
-# changeColor.js
+# parrot.js
 
 While you most likely will not find a use for this right now, the library serves the purpose
 of generating a random color, either in RGB og HEX, and makes you able to change this by
